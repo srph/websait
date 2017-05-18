@@ -1,0 +1,9 @@
+.main-wrapper {
+  padding: 12px;
+  background: linear-gradient(to bottom, #50A3E3, #A2F2CF);
+
+  > .inner {
+    min-height: 100vh;
+    background: $color-white;
+  }
+}

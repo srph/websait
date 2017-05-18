@@ -1,0 +1,42 @@
+.main-nav {
+  margin-bottom: 48px;
+  
+  > .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    font-size: $font-size-h4;
+    background: $color-white;
+    border-bottom: 1px solid $color-gray-light;
+    z-index: 100;
+  }
+
+  > .linkset {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background: $color-white;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.2);
+    z-index: 90;
+  }
+
+  > .linkset > .link {
+    height: 100%;
+    line-height: 39px;
+    font-weight: 300;
+    color: $color-gray-light;
+    height: 100%;
+  }
+
+  > .linkset > .link:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  > .linkset > .link.-active {
+    color: $color-black;
+  }
+}

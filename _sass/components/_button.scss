@@ -1,0 +1,27 @@
+.button {
+  // Set default to avoid inherit
+  @include font-tofino;
+  display: inline-block;
+  padding: 0 30px;
+  height: $form-size;
+  line-height: ($form-size - 1px);
+  color: $color-white;
+  vertical-align: middle;
+  font-size: $font-size-h6;
+  font-weight: 500;
+  background: $color-primary;
+  border: 0;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  cursor: pointer;
+  outline: 0;
+  transition: 0.2s all;
+
+  &:hover {
+    background: lighten($color-primary, 10%);
+  }
+
+  &.-rounded {
+    border-radius: 40px;
+  }
+}

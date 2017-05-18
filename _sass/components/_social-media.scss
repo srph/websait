@@ -1,0 +1,24 @@
+.social-media {
+  display: flex;
+  align-items: center;
+
+  > .media {
+    font-size: $font-size-h2;
+    color: $color-black;
+    transform: scale(1);
+    transition: all 100ms ease-in;
+  }
+
+  > .media:hover {
+    color: $color-primary;
+    transform: scale(1.4);
+  }
+
+  > .media:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &.-alternate > .media {
+    color: $color-gray;
+  }
+}

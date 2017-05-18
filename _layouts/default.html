@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/assets/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/font-tofino.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="inner">
+      <nav class="main-nav">
+        <div class="title">Kier Borromeo</div>
+        <div class="linkset">
+          <a href="/" class="link {% if page.path == 'index.html' %} -active {% endif %}">Home</a>
+          <a href="/showcase.html" class="link {% if page.path == 'showcase.html' %} -active {% endif %}">Showcase</a>
+          <a href="/lab.html" class="link {% if page.path == 'lab.html' %} -active {% endif %}">Creative Lab</a>
+        </div>
+      </nav>
+
+      {{ content }}
+    </div>
+  </div>
+
+  <script src="https://use.fontawesome.com/b9df2c4388.js"></script>
+</body>
+</html>

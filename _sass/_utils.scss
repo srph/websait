@@ -1,0 +1,51 @@
+.u-clearfix {
+  @include clearfix;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-muted {
+  color: $color-gray;
+}
+
+.u-text-light {
+  font-weight: 300;
+}
+
+.u-block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-spacer {
+  margin-bottom: 16px;
+}
+
+.u-spacer-large {
+  margin-bottom: 32px;
+}
+
+// Grid Utilities
+// Generates block sizes;
+// u-size-md-2 (2/12), etc.
+@each $label, $size in $grid-breakpoints {
+  @for $i from 1 through 12 {
+    .u-size-#{$label}-#{$i} {
+      width: 100%;
+
+      @media (min-width: $size) {
+        width: percentage($i / 12);
+      }
+    }
+  }
+}

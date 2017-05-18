@@ -1,0 +1,89 @@
+@mixin font-tofino() {
+  font-family: 'Tofino', San Francisco, -apple-system, BlinkMacSystemFont, ".SFSNText-Regular", Segoe UI, Ubuntu, Helvetica, sans-serif;
+}
+
+@mixin font-source-han() {
+  font-family: 'Tofino', San Francisco, -apple-system, BlinkMacSystemFont, ".SFSNText-Regular", Segoe UI, Ubuntu, Helvetica, sans-serif;
+}
+
+// A fluid container
+@mixin container() {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+}
+
+// Impose width constraints on container
+//
+// @NOTE: Do not @include inside a media query
+// or inside a mixin media query because you may
+// get weird and undesired behavior. Will yet
+// have to check this one.
+//
+// @REFACTOR: The rules have an !important flag
+// to avoid issues with the container's width (mixin)
+// being prioritized when applied inside a media query
+@mixin container-constraints() {
+  @include breakpoint-md() {
+    width: map-get($grid-breakpoints, md) !important;
+  }
+
+  @include breakpoint-lg() {
+    width: map-get($grid-breakpoints, lg) !important;
+  }
+
+  @include breakpoint-xl() {
+    width: map-get($grid-breakpoints, xl) !important;
+  }
+}
+
+// Usage is discouraged unless you need to override
+// some existing behavior through a modifier
+@mixin breakpoint-xs() {
+  @media (min-width: map-get($grid-breakpoints, xs)) {
+    @content;
+  }
+}
+
+// Usage is discouraged, use only as a last resort
+// (when overriding is impossible and redundant).
+// Useful for xs-only rules of modifiers
+@mixin breakpoint-xs-only() {
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm() {
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md() {
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg() {
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl() {
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

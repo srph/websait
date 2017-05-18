@@ -1,0 +1,10 @@
+// A generic reusable container class
+.container {
+  @include container;
+  @include container-constraints;
+  height: 100%;
+
+  &.container--max-md {
+    max-width: map-get($grid-breakpoints, md);
+  }
+}

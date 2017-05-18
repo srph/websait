@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  @include font-tofino;
+  font-size: $font-size-base;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+p {
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+a {
+  color: $color-primary;
+
+  &, &:hover {
+    text-decoration: none;
+  }  
+}
+
+hr {
+  margin: 0;
+  height: 1px;
+  width: 100%;
+  background: $color-gray-light;
+  border: 0;
+}
