@@ -1,6 +1,14 @@
 .showcase-item {
   padding-bottom: 32px;
-  border-bottom: 1px solid $color-gray-light;
+  margin-bottom: 64px;
+
+  &:not(:first-child) {
+    padding-top: 32px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-gray-light;
+  }
 
   > .preview {
     margin-bottom: 24px;

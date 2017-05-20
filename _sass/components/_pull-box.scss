@@ -19,7 +19,8 @@
     font-weight: 300;
   }
 
-  > .body > a {
+  > .body > a,
+  > .body > .emphasis {
     color: $color-black;
     font-weight: 600;
   }
