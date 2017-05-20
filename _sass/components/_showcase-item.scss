@@ -57,7 +57,7 @@
     border-radius: 50%;
   }
 
-  > .tags > li:first::before {
+  > .tags > li:first-child::before {
     background: $color-sub;
   }
 }
