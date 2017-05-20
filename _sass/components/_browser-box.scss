@@ -1,0 +1,42 @@
+.browser-box {
+  > .heading {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #2F2F2F;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  > .heading > .actions {
+    display: flex;
+    margin-right: 16px;
+  }
+
+  > .heading > .actions > .action {
+    height: 12px;
+    width: 12px;
+    background: #979797;
+    border-radius: 50%;
+  }
+
+  > .heading > .actions > .action:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  > .heading > .url {
+    width: 150px;
+    height: 20px;
+    background: #4E4E4E;
+    border-radius: $border-radius;
+  }
+
+  > .heading > .cog {
+    margin-left: auto;
+    color: #979797;
+  }
+
+  > .dom {
+    width: 100%;
+  }
+}

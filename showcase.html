@@ -1,28 +1,55 @@
 ---
-title: Sup
+title: Showcase
+
+projects:
+  -
+    preview: tara.png
+    title: Tara PMB
+    description: TARA is the intelligent product builder. TARA makes it easier with brilliant human talent and smart project management.
+    tags:
+      - Web App
+      - UI Design
 ---
 
 <div class="container">
-  <div class="formatted-content">
-    <p class="lead">Developer, designer, and an open-source contributor. I love writing intuitive, reactive web applications.</p>
-  </div>
 
-  <div class="formatted-content">
+  <div class="formatted-content -intro">
     <h6 class="heading">Work</h6>
-    <p class="body">Lead Front-End Developer at TARA AI. I build front-end infrastructure that powers its Project Management Board.</p>
-
-    <p class="body">Previously at One and Sourcescript.</p>
+    <p class="body">Here you can find some interesting side projects, and open-source contributions I’ve made in my free time.</p>
   </div>
 
-  <div class="formatted-content">
-    <h6 class="heading">Elsewhere</h6>
-    <nav class="social-media">
-      <a href="#" class="media"><i class="fa fa-github"></i></a>
-      <a href="#" class="media"><i class="fa fa-medium"></i></a>
-      <a href="#" class="media"><i class="fa fa-twitter"></i></a>
-      <a href="#" class="media"><i class="fa fa-codepen"></i></a>
-      <a href="#" class="media"><i class="fa fa-dribbble"></i></a>
-      <a href="#" class="media"><i class="fa fa-envelope-o"></i></a>
-    </nav>
-  </div>
+  {% for project in page.projects %}
+    <div class="showcase-item">
+      <div class="preview">
+        <div class="browser-box">
+          <div class="heading">
+            <div class="actions">
+              <div class="action"></div>
+              <div class="action"></div>
+              <div class="action"></div>
+            </div>
+
+            <div class="url"></div>
+
+            <div class="cog">
+              <i class="fa fa-cog"></i>
+            </div>
+          </div>
+
+          <img src="/assets/showcase/{{ project.preview }}" class="dom">
+        </div>
+      </div>
+
+      <h1 class="title">{{ project.title }}</h1>
+      <p class="description">{{ project.description }}</p>
+
+      <ul class="tags">
+        {% for tag in project.tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+
+      <a href="#" class="button">View Project</a>
+    </div>
+  {% endfor %}
 </div>
