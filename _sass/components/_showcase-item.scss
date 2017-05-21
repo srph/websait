@@ -3,6 +3,7 @@
 
   @include breakpoint-md {
     margin-bottom: 32px;
+    padding-top: 40px;
     padding-bottom: 0;
   }
 
@@ -10,10 +11,6 @@
     @include breakpoint-md {
       margin-bottom: 64px;
     }
-  }
-
-  &:not(:first-child) {
-    padding-top: 40px;
   }
 
   &:not(:last-child) {
