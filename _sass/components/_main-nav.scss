@@ -1,5 +1,14 @@
 .main-nav {
   margin-bottom: 48px;
+
+  @include breakpoint-md {
+    @include container;
+    @include container-constraints;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
   
   > .title {
     position: relative;
@@ -11,6 +20,12 @@
     background: $color-white;
     border-bottom: 1px solid $color-gray-light;
     z-index: 100;
+
+    @include breakpoint-md {
+      display: block;
+      height: auto;
+      border-bottom: 0;
+    }
   }
 
   > .linkset {
@@ -22,6 +37,10 @@
     background: $color-white;
     box-shadow: 0 3px 16px rgba(0,0,0,0.2);
     z-index: 90;
+
+    @include breakpoint-md {
+      box-shadow: none;
+    }
   }
 
   > .linkset > .link {

@@ -8,57 +8,72 @@ projects:
       -
         title: jqt
         description: A low-level jQuery plugin for node hiding and showing through css transitions
+        url: https://github.com/srph/jqt
       -
         title: jQuery Modal
         description: Spawn modals with jQuery
+        url: https://github.com/srph/jquery-modal
   -
     section: React
     projects:
       -
         title: React Confirmable
         description: A high-order component to replace the native `confirm` function with yer modals
+        url: https://github.com/srph/react-confirmable
       -
         title: React Timesheet
         description: An opinionated timesheet component for React
+        url: https://github.com/srph/react-timesheet
       -
         title: React Infinite Scroll
         description: A simple infinite scroll React.js component
+        url: https://github.com/srph/react-infinite-scroll
   -
     section: Miscellaneous
     projects:
       -
         title: Djiyo
         description: A high-order component to replace the native `confirm` function with yer modals
+        url: https://github.com/srph/djiyo
       -
         title: npm Scripts Info
         description: Display the description of your npm scripts
+        url: https://github.com/srph/npm-scripts-info
       -
         title: Dota 2 Responses Slack Bot
         description: A Slack bot referencing Dota 2 responses to appropriate chat messages.
+        url: https://github.com/srph/dota-responses-slack-bot
       -
         title: PLDTFIBR Wifi Password
         description: A mac-address reverser to obtain the default password of a PLDTHOMEFIBR Wifi.
+        url: https://github.com/srph/pldtfibr-wifi-password
   -
     section: Archived & Hackathons
     projects:
       -
         title: Pasei
         description: A grading application for Pasay High School. Built with Laravel.
+        url: https://github.com/srph/pasei
       -
         title: Quicklean
         description: A dissertation mobile app to manage a self-served laundromat. Built with Ionic.
+        url: https://github.com/srph/quicklean
       -
         title: E-Dental
         description: A dissertation web app to manage a dental clinic’s customers and schedules. Built with Laravel.
+        url: https://github.com/srph/edms
       -
         title: Toroku
         description: Web user registration for Valiant ROSE Online. Built with Laravel.
+        url: https://github.com/srph/toroku
       -
         title: Dream Rose Online
         description: The web app for Dream ROSE Online. Built with Laravel.
+        url: https://github.com/srph/dream-rose
       -
         title: Osmena Times
         description: A rushed news system. Built with Laravel.
+        url: https://github.com/srph/osmena-times
 ---
 
 <div class="container">
@@ -71,18 +86,22 @@ projects:
     <div class="lab-section">
       <h4 class="heading">{{ section.section }}</h4>
 
-      {% for project in section.projects %}
-        <div class="item">
-          <h6 class="heading">
-            {{ project.title }}
-            <i class="arrow fa fa-angle-right"></i>
-          </h6>
+      <div class="group">
+        {% for project in section.projects %}
+          <div class="item">
+            <h6 class="heading">
+              <a href="{{ project.url }}" class="link" target="_blank">
+                {{ project.title }}
+                <i class="arrow fa fa-angle-right"></i>
+              </a>
+            </h6>
 
-          <p class="body">
-            {{ project.description }}
-          </p>
-        </div>
-      {% endfor %}
+            <p class="body">
+              {{ project.description }}
+            </p>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   {% endfor %}
 

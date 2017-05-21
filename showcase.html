@@ -9,6 +9,13 @@ projects:
     tags:
       - Web App
       - UI Design
+  -
+    preview: tara.png
+    title: Tara PMB
+    description: TARA is the intelligent product builder. TARA makes it easier with brilliant human talent and smart project management.
+    tags:
+      - Web App
+      - UI Design
 ---
 
 <div class="container">
@@ -18,40 +25,44 @@ projects:
     <p class="body">Here you can find some interesting side projects, and open-source contributions I’ve made in my free time.</p>
   </div>
 
-  {% for project in page.projects %}
-    <div class="showcase-item">
-      <div class="preview">
-        <div class="browser-box">
-          <div class="heading">
-            <div class="actions">
-              <div class="action"></div>
-              <div class="action"></div>
-              <div class="action"></div>
+  <section>
+    {% for project in page.projects %}
+      <div class="showcase-item">
+        <div class="preview">
+          <div class="browser-box">
+            <div class="heading">
+              <div class="actions">
+                <div class="action"></div>
+                <div class="action"></div>
+                <div class="action"></div>
+              </div>
+
+              <div class="url"></div>
+
+              <div class="cog">
+                <i class="fa fa-cog"></i>
+              </div>
             </div>
 
-            <div class="url"></div>
-
-            <div class="cog">
-              <i class="fa fa-cog"></i>
-            </div>
+            <img src="/assets/showcase/{{ project.preview }}" class="dom">
           </div>
+        </div>
 
-          <img src="/assets/showcase/{{ project.preview }}" class="dom">
+        <div class="info">
+          <h1 class="title">{{ project.title }}</h1>
+          <p class="description">{{ project.description }}</p>
+
+          <ul class="tags">
+            {% for tag in project.tags %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+
+          <a href="#" class="button">View Project</a>
         </div>
       </div>
-
-      <h1 class="title">{{ project.title }}</h1>
-      <p class="description">{{ project.description }}</p>
-
-      <ul class="tags">
-        {% for tag in project.tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
-      </ul>
-
-      <a href="#" class="button">View Project</a>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </section>
 
   <div class="pull-box">
     <h6 class="heading">Work With Me</h6>

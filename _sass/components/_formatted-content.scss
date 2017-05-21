@@ -29,5 +29,9 @@
   &.-intro > .body {
     font-weight: 400;
     font-size: $font-size-base;
+
+    @include breakpoint-md {
+      font-size: $font-size-h2;
+    }
   }
 }

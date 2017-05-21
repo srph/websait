@@ -3,8 +3,18 @@
   padding-bottom: 24px;
   border-top: 1px solid $color-gray-light;
 
+  @include breakpoint-md {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   > .text {
     margin-bottom: 24px;
+
+    @include breakpoint-md {
+      width: 320px;
+    }
   }
 
   > .text > .attribution {

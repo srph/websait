@@ -21,4 +21,8 @@
   &.-alternate > .media {
     color: $color-gray;
   }
+
+  &.-alternate > .media:hover {
+    color: $color-primary;
+  }
 }

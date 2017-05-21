@@ -20,23 +20,9 @@
 // @NOTE: Do not @include inside a media query
 // or inside a mixin media query because you may
 // get weird and undesired behavior. Will yet
-// have to check this one.
-//
-// @REFACTOR: The rules have an !important flag
-// to avoid issues with the container's width (mixin)
-// being prioritized when applied inside a media query
+// have to check this one.ery
 @mixin container-constraints() {
-  @include breakpoint-md() {
-    width: map-get($grid-breakpoints, md) !important;
-  }
-
-  @include breakpoint-lg() {
-    width: map-get($grid-breakpoints, lg) !important;
-  }
-
-  @include breakpoint-xl() {
-    width: map-get($grid-breakpoints, xl) !important;
-  }
+  max-width: 800px;
 }
 
 // Usage is discouraged unless you need to override
