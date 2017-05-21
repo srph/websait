@@ -9,7 +9,12 @@
   }
 
   > .lead {
+    margin-bottom: 0;
     font-size: $font-size-h2;
+
+    @include breakpoint-md {
+      font-size: $font-size-h1;
+    }
   }
 
   > .body {
