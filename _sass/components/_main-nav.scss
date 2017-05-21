@@ -25,6 +25,7 @@
     @include breakpoint-md {
       display: block;
       height: auto;
+      font-size: $font-size-h2;
       border-bottom: 0;
     }
   }
@@ -50,10 +51,18 @@
     font-weight: 300;
     color: $color-gray-light;
     height: 100%;
+
+    @include breakpoint-md {
+      font-size: $font-size-h4;
+    }
   }
 
   > .linkset > .link:not(:last-child) {
     margin-right: 16px;
+
+    @include breakpoint-md {
+      margin-right: 24px;
+    }
   }
 
   > .linkset > .link.-active {
