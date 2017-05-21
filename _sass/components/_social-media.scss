@@ -16,6 +16,10 @@
 
   > .media:not(:last-child) {
     margin-right: 16px;
+
+    @include breakpoint-md {
+      margin-right: 24px;
+    }
   }
 
   &.-alternate > .media {
