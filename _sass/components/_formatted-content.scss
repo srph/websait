@@ -20,7 +20,10 @@
   > .body {
     margin-bottom: 0;
     font-size: $font-size-h3;
-    font-weight: 300;
+
+    @include breakpoint-md {
+      width: 60%;
+    }
   }
 
   > .body:not(:last-child) {
