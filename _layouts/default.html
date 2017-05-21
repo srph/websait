@@ -17,7 +17,13 @@
   <div class="main-wrapper">
     <div class="inner">
       <nav class="main-nav">
-        <a href="/" class="title">Kier Borromeo</a>
+        <a href="/" class="title">
+          {% if page.path == 'index.html' %}
+            <div class="pogi-logo">K</div>
+          {% else %}
+            Kier Borromeo
+          {% endif %}
+        </a>
         <div class="linkset">
           <a href="/" class="link {% if page.path == 'index.html' %} -active {% endif %}">Home</a>
           <a href="/showcase.html" class="link {% if page.path == 'showcase.html' %} -active {% endif %}">Showcase</a>
