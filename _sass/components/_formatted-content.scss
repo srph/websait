@@ -8,15 +8,6 @@
     letter-spacing: 1.5px;
   }
 
-  > .lead {
-    margin-bottom: 0;
-    font-size: $font-size-h2;
-
-    @include breakpoint-md {
-      font-size: $font-size-h1;
-    }
-  }
-
   > .body {
     margin-bottom: 0;
     font-size: $font-size-h3;
@@ -28,6 +19,19 @@
 
   > .body:not(:last-child) {
     margin-bottom: 24px;
+  }
+
+  &.-lead {
+    margin-bottom: 80px;
+  }
+
+  &.-lead > .body {
+    font-size: $font-size-h2;
+
+    @include breakpoint-md {
+      font-size: $font-size-h1;
+      width: 100%;
+    }
   }
 
   &.-intro {
