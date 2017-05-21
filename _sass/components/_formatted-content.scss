@@ -26,6 +26,7 @@
   }
 
   &.-lead > .body {
+    @include font-source-han;
     font-size: $font-size-h2;
 
     @include breakpoint-md {
