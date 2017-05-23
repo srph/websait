@@ -3,12 +3,13 @@ title: Showcase
 
 projects:
   -
-    preview: tara.png
-    title: Tara PMB
-    description: TARA is the intelligent product builder. TARA makes it easier with brilliant human talent and smart project management.
+    preview: loaner.png
+    title: Loaner
+    description: Loaner is an open-source desktop application that makes it easy to manage personal loans.
     tags:
-      - Web App
+      - Desktop App
       - UI Design
+    platform: desktop
   -
     preview: tara.png
     title: Tara PMB
@@ -16,6 +17,31 @@ projects:
     tags:
       - Web App
       - UI Design
+    platform: browser
+  -
+    preview: hackstrong.png
+    title: GoCart
+    description: Social Media Meets E-commerce. Your own mall at your fingertips.
+    tags:
+      - Web App
+      - Startup
+    platform: browser
+  -
+    preview: hackstrong.png
+    title: One Marketplace
+    description: One Marketplace is the bazaar of One, the social e-commerce platform that lets you build personal or commercial online stores.
+    tags:
+      - Web App
+      - UI Design
+    platform: browser
+  -
+    preview: hackstrong.png
+    title: Hackstrong
+    description: The website for the first HackStrong event
+    tags:
+      - Web App
+      - UI Design
+    platform: browser
 ---
 
 <div class="container">
@@ -37,11 +63,13 @@ projects:
                 <div class="action"></div>
               </div>
 
-              <div class="url"></div>
+              {% if project.platform == 'browser' %}
+                <div class="url"></div>
 
-              <div class="cog">
-                <i class="fa fa-cog"></i>
-              </div>
+                <div class="cog">
+                  <i class="fa fa-cog"></i>
+                </div>
+              {% endif %}
             </div>
 
             <img src="/assets/showcase/{{ project.preview }}" class="dom">
